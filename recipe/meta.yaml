@@ -1,19 +1,20 @@
 {% set name = "py-mathjax" %}
-{% set version = "2.7.5.1" %}
+{% set version = "2.7.5" %}
+{% set pypi_build = ".1" %}
 
 package:
   name: {{ name|lower }}
-  version: {{ version }}
+  version: {{ version }}{{ pypi_build }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}{{ pypi_build }}.tar.gz
   sha256: a4ef8b5ee39b522ac4d27a7fa16f9a1d2e905f3f5221a082c35afc2bbebc2ae9
   patches:
     - conda.patch
 
 build:
   noarch: python
-  number: 0
+  number: 1
   entry_points:
     - py-mathjax-path = pymathjax.__main__:cli
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
@@ -24,7 +25,7 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - mathjax =2.7.5
+    - mathjax ={{ version }}
 
 test:
   imports:
