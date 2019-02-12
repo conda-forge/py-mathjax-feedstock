@@ -18,8 +18,9 @@ Summary: MathJax in pip and conda.
 Current build status
 ====================
 
-All platforms:
-[![noarch](https://img.shields.io/circleci/project/github/conda-forge/py-mathjax-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/py-mathjax-feedstock)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/py-mathjax-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/py-mathjax-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/py-mathjax-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/py-mathjax-feedstock)
+![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
 ====================
