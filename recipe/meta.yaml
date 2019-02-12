@@ -9,12 +9,10 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}{{ pypi_build }}.tar.gz
   sha256: a4ef8b5ee39b522ac4d27a7fa16f9a1d2e905f3f5221a082c35afc2bbebc2ae9
-  patches:
-    - conda.patch
 
 build:
-  noarch: python
   number: 1
+  skip: True  # [py2k]
   entry_points:
     - py-mathjax-path = pymathjax.__main__:cli
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
