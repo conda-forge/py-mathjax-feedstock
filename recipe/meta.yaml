@@ -1,5 +1,6 @@
+{% set dep_ver = "3.0.0" %}
 {% set name = "py-mathjax" %}
-{% set version = "3.0.0" %}
+{% set version = "3.0.0.1" %}
 # {% set dep_ver = "3.0.0" %}
 
 package:
@@ -8,7 +9,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 01312f06eea1f21909b606232a49dc6482e9185be0614bbb7765e37723695556
+  sha256: 383f7337849a23890f64a7d57ad879c4b253f09fd7f494c8e1e758950440511c
   patches:
     - conda.patch
 
@@ -17,7 +18,7 @@ build:
   number: 0
   entry_points:
     - py-mathjax-path = pymathjax.__main__:cli
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -40,7 +41,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: "Installs mathjax conda package in pip and conda."
+  summary: Installs mathjax conda package in pip and conda.
   doc_url: https://github.com/kiwi0fruit/py-mathjax
   dev_url: https://github.com/kiwi0fruit/py-mathjax
 
