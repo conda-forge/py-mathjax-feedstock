@@ -5,11 +5,13 @@ Home: https://github.com/kiwi0fruit/py-mathjax
 
 Package license: Apache-2.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/py-mathjax-feedstock/blob/master/LICENSE.txt)
 
 Summary: Installs mathjax conda package in pip and conda.
 
+Development: https://github.com/kiwi0fruit/py-mathjax
 
+Documentation: https://github.com/kiwi0fruit/py-mathjax
 
 Current build status
 ====================
