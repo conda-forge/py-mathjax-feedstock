@@ -1,6 +1,6 @@
 {% set name = "py-mathjax" %}
-{% set version = "3.0.0.2" %}
-{% set dep_ver = "3.0.0" %}
+{% set version = "2.7.7.2" %}
+{% set dep_ver = "2.7.7" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cead005294c3a3c6610307d2f089f7442a0458d8b4c76e424cd2ed10f784312a
+  sha256: f61bd279603014ca7f22f54ec7f3c33f79465b5671393cd94b9df5777b805d29
   patches:
     - conda.patch
 
